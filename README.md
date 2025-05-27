@@ -2,8 +2,26 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, configure `` .env ``, add the following 2 lines of code:
 
+```
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+DATABASE_URL="mysql://USERNAME:PASSWORD@HOST:PORT/theunspokenwords?connection_limit=5&socket_timeout=5&pool_timeout=15"
+```
+See the documentation: https://www.prisma.io/docs/orm/overview/databases/mysql#base-url-and-path
+
+Second, install ```node_modules```
+
+```
+npm i
+```
+
+Third, run migration
+```
+npx prisma migration dev --name init
+```
+
+Finally, run the project
 ```bash
 npm run dev
 # or
@@ -16,9 +34,9 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This project is still under development, we will finish it as soon as possible (hopefully).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Also, this project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
 
