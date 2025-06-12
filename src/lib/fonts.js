@@ -2,6 +2,7 @@ import { Comfortaa, Gaegu, Klee_One, Mansalva, Pacifico } from "next/font/google
 
 
 export const gaegu = Gaegu({
+    subsets: ["latin"],
     weight: "400"
 })
 
@@ -11,11 +12,13 @@ export const comfortaa = Comfortaa({
 });
 
 export const kleeOne = Klee_One({
+    subsets: ["latin"],
     adjustFontFallback: false,
     weight: "400"
 })
 
 export const mansalva = Mansalva({
+    subsets: ["latin"],
     weight: '400',
 })
 
